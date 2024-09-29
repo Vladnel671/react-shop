@@ -1,7 +1,10 @@
-import './App.css';
+import { RouterProvider } from 'react-router-dom';
 
-export const App = () => {
-  return <></>;
-};
+import { Providers } from '@/components/Providers';
+import { router } from '@/constants/router.tsx';
 
-export default App;
+export const App = () => (
+    <Providers>
+        <RouterProvider router={router} />
+    </Providers>
+);
